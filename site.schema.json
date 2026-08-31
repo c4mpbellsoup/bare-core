@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://yourdomain.com/schemas/myschema.json",
+  "title": "Bare Site",
+  "description": "The schema for a Bare website.",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "description": "The version of the Bare schema used by this site.",
+      "type": "integer"
+      "const": 1,
+    }
+  }
+}
