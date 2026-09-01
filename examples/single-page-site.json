@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"name": "Single-Page Site",
+	"description": "A simple single-page site example.",
+	"header": {},
+	"footer": {},
+	"pages": [
+		{
+			"route": "/",
+			"title": "Home",
+			"sections": [
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1776695799247-b15851a1aa2d",
+					"heading": "Welcome to my Single-Page Site",
+					"subheading": "Just a nice landing page. Nothing flash.",
+					"actions": [
+						{
+							"label": "Google Something",
+							"link": "www.google.com",
+							"style": "primary"
+						}
+					]
+				}
+			]
+		}
+	]
+}
