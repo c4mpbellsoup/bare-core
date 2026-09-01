@@ -9,32 +9,27 @@
 
 	"properties": {
 		"schemaVersion": {
-			"description": "The version of the Bare schema used by this site.",
+			"description": "The version of the Bare Site schema used by this site.",
 			"type": "integer",
 			"const": 1
 		},
-
 		"name": {
 			"description": "The name of the site (business, organisation, etcetera).",
 			"type": "string",
 			"minLength": 1,
 			"maxLength": 50
 		},
-
 		"description": {
 			"description": "A short description of the site.",
 			"type": "string",
 			"maxLength": 150
 		},
-
 		"header": {
 			"$ref": "#/$defs/header"
 		},
-
 		"footer": {
 			"$ref": "#/$defs/footer"
 		},
-
 		"pages": {
 			"type": "array",
 			"minItems": 1,
@@ -55,7 +50,6 @@
 				}
 			}
 		},
-
 		"footer": {
 			"type": "object",
 			"properties": {

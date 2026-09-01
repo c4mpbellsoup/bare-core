@@ -12,14 +12,12 @@
 			"type": "string",
 			"pattern": "^/(?:[A-Za-z0-9-]+/?)*$"
 		},
-
 		"title": {
 			"description": "The title of the page.",
 			"type": "string",
 			"minLength": 1,
 			"maxLength": 50
 		},
-
 		"sections": {
 			"type": "array",
 			"items": {

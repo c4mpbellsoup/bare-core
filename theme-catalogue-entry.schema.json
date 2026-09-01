@@ -1,0 +1,32 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/theme-catalogue-entry.schema.json",
+	"title": "Bare Theme Catalogue Entry",
+	"description": "Metadata for a theme in the Bare theme catalogue.",
+	"type": "object",
+
+	"required": ["id", "name", "description", "author", "theme"],
+
+	"properties": {
+		"id": {
+			"description": "The stable identifier of the theme.",
+			"type": "string",
+			"pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+		},
+		"name": {
+			"description": "The display name of the theme.",
+			"type": "string"
+		},
+		"description": {
+			"description": "A short description of the theme.",
+			"type": "string"
+		},
+		"author": {
+			"description": "The person or organisation that created the theme.",
+			"type": "string"
+		},
+		"theme": {
+			"$ref": "./theme.schema.json"
+		}
+	}
+}

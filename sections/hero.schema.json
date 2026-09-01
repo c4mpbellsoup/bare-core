@@ -10,19 +10,15 @@
 		"type": {
 			"const": "hero"
 		},
-
 		"image": {
 			"type": "string"
 		},
-
 		"heading": {
 			"type": "string"
 		},
-
 		"subheading": {
 			"type": "string"
 		},
-
 		"actions": {
 			"type": "array",
 			"items": {
