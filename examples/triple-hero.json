@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"name": "Triple Hero Site",
+	"description": "A simple site example with a triple hero on the landing page.",
+	"header": {},
+	"footer": {},
+	"pages": [
+		{
+			"route": "/",
+			"title": "Home",
+			"sections": [
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1776695799247-b15851a1aa2d",
+					"heading": "One..."
+				},
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1787583033648-e708b7241fe2",
+					"heading": "Two..."
+				},
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1764365086660-08014a147837",
+					"heading": "Even Three Heroes!"
+				}
+			]
+		}
+	]
+}

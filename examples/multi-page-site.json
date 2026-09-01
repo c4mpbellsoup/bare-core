@@ -1,0 +1,63 @@
+{
+	"schemaVersion": 1,
+	"name": "Multi-Page Site",
+	"description": "A simple multi-page site example.",
+	"header": {},
+	"footer": {},
+	"pages": [
+		{
+			"route": "/",
+			"title": "One",
+			"sections": [
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1776695799247-b15851a1aa2d",
+					"heading": "One...",
+					"actions": [
+						{
+							"label": "Next Page",
+							"link": "/two",
+							"style": "primary"
+						}
+					]
+				}
+			]
+		},
+		{
+			"route": "/two",
+			"title": "Two",
+			"sections": [
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1787583033648-e708b7241fe2",
+					"heading": "Two...",
+					"actions": [
+						{
+							"label": "Next Page",
+							"link": "/three",
+							"style": "secondary"
+						}
+					]
+				}
+			]
+		},
+		{
+			"route": "/three",
+			"title": "Three",
+			"sections": [
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1764365086660-08014a147837",
+					"heading": "Three!",
+					"actions": [
+						{
+							"label": "To The Start",
+							"link": "/",
+							"style": "primary"
+						}
+					]
+				}
+			]
+		}
+	]
+}
