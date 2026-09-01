@@ -1,0 +1,10 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/section.schema.json",
+	"title": "Section",
+	"oneOf": [
+		{
+			"$ref": "./sections/hero.schema.json"
+		}
+	]
+}

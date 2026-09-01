@@ -1,0 +1,55 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/sections/hero.schema.json",
+	"title": "Hero",
+	"type": "object",
+
+	"required": ["type", "image", "heading"],
+
+	"properties": {
+		"type": {
+			"const": "hero"
+		},
+
+		"image": {
+			"type": "string"
+		},
+
+		"heading": {
+			"type": "string"
+		},
+
+		"subheading": {
+			"type": "string"
+		},
+
+		"actions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/action"
+			}
+		}
+	},
+
+	"$defs": {
+		"action": {
+			"type": "object",
+			"required": ["label", "link"],
+			"properties": {
+				"label": {
+					"type": "string",
+					"minLength": 1,
+					"maxLength": 50
+				},
+				"link": {
+					"type": "string",
+					"minLength": 1
+				},
+				"style": {
+					"type": "string",
+					"enum": ["primary", "secondary"]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/page.schema.json",
+	"title": "Page",
+	"type": "object",
+
+	"required": ["route", "title", "sections"],
+
+	"properties": {
+		"route": {
+			"description": "The route of the page.",
+			"type": "string",
+			"pattern": "^/(?:[A-Za-z0-9-]+/?)*$"
+		},
+
+		"title": {
+			"description": "The title of the page.",
+			"type": "string",
+			"minLength": 1,
+			"maxLength": 50
+		},
+
+		"sections": {
+			"type": "array",
+			"items": {
+				"$ref": "./section.schema.json"
+			}
+		}
+	}
+}
