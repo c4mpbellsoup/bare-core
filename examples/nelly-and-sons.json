@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"name": "Nelly & Sons Electrical",
+	"header": {},
+	"footer": {},
+	"pages": [
+		{
+			"route": "/",
+			"title": "Home",
+			"sections": [
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1776695799247-b15851a1aa2d",
+					"heading": "The Outdoorsy Electrician",
+					"subheading": "Industrial | Agricultural | Irrigation"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"name": "Fossil Music",
+	"header": {},
+	"footer": {},
+	"pages": [
+		{
+			"route": "/",
+			"title": "Fossil Music",
+			"sections": [
+				{
+					"type": "hero",
+					"image": "https://images.unsplash.com/photo-1776695799247-b15851a1aa2d",
+					"heading": "Discover Your Passion",
+					"subheading": "Professional piano lessons for all ages",
+					"actions": [
+						{
+							"label": "Learn More",
+							"link": "/"
+						},
+						{
+							"label": "Book a Lesson",
+							"link": "/"
+						}
+					]
+				}
+			]
+		}
+	]
+}
