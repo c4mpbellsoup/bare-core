@@ -21,7 +21,7 @@
 		"sections": {
 			"type": "array",
 			"items": {
-				"$ref": "./section.schema.json"
+				"$ref": "./components/section.schema.json"
 			}
 		}
 	}

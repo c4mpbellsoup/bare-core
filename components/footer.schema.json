@@ -1,0 +1,16 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/components/footer.schema.json",
+	"title": "Footer",
+	"type": "object",
+
+	"required": [],
+
+	"properties": {
+		"visible": {
+			"description": "Whether to display the footer.",
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

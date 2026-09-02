@@ -1,0 +1,30 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/template.schema.json",
+	"title": "Bare Template",
+	"description": "The schema for a Bare website template.",
+	"type": "object",
+
+	"required": ["schemaVersion", "header", "footer", "pages"],
+
+	"properties": {
+		"schemaVersion": {
+			"description": "The version of the Bare Template schema used by this site.",
+			"type": "integer",
+			"const": 1
+		},
+		"header": {
+			"$ref": "./components/header.schema.json"
+		},
+		"footer": {
+			"$ref": "./components/footer.schema.json"
+		},
+		"pages": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "./page.schema.json"
+			}
+		}
+	}
+}
