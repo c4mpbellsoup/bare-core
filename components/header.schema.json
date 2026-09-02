@@ -4,7 +4,11 @@
 	"title": "Header",
 	"type": "object",
 
-	"required": ["left", "centre", "right"],
+	"anyOf": [
+		{ "required": ["left"] },
+		{ "required": ["centre"] },
+		{ "required": ["right"] }
+	],
 
 	"properties": {
 		"left": {
@@ -26,9 +30,6 @@
 	"$defs": {
 		"headerItem": {
 			"oneOf": [
-				{
-					"type": "null"
-				},
 				{
 					"type": "object",
 					"required": ["type"],
