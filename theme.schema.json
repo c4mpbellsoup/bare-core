@@ -5,7 +5,7 @@
 	"description": "The schema for a Bare Site theme.",
 	"type": "object",
 
-	"required": ["schemaVersion", "colors", "typography", "spacing", "shape"],
+	"required": ["schemaVersion", "colours", "typography", "spacing", "shape"],
 
 	"properties": {
 		"schemaVersion": {
@@ -13,8 +13,8 @@
 			"type": "integer",
 			"const": 1
 		},
-		"colors": {
-			"$ref": "#/$defs/colors"
+		"colours": {
+			"$ref": "#/$defs/colours"
 		},
 		"typography": {
 			"$ref": "#/$defs/typography"
@@ -28,9 +28,26 @@
 	},
 
 	"$defs": {
-		"colors": {
+		"colours": {
 			"type": "object",
-			"required": ["base", "surface", "accent", "text", "muted", "border"],
+			"required": [
+				"primary",
+				"primaryContent",
+				"neutral",
+				"neutralContent",
+				"base1",
+				"base2",
+				"base3",
+				"baseContent",
+				"info",
+				"infoContent",
+				"success",
+				"successContent",
+				"warning",
+				"warningContent",
+				"error",
+				"errorContent"
+			],
 			"properties": {
 				"primary": {
 					"description": "The main colour of your brand.",
