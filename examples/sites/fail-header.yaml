@@ -15,7 +15,7 @@ template:
 theme:
  	# ../themes/light-theme.yaml
   schemaVersion: 1
-  colors:
+  colours:
     primary: oklch(45% 0.24 277.023)
     primaryContent: oklch(93% 0.034 272.788)
     secondary: oklch(65% 0.241 354.308)
