@@ -29,10 +29,11 @@
 
 	"$defs": {
 		"headerItem": {
+			"type": "object",
+			"required": ["type"],
+			"unevaluatedProperties": false,
 			"oneOf": [
 				{
-					"type": "object",
-					"required": ["type"],
 					"properties": {
 						"type": {
 							"const": "logo"
@@ -40,8 +41,7 @@
 					}
 				},
 				{
-					"type": "object",
-					"required": ["type", "menu"],
+					"required": ["menu"],
 					"properties": {
 						"type": {
 							"const": "menu"
@@ -51,8 +51,7 @@
 						}
 					}
 				}
-			],
-			"unevaluatedProperties": false
+			]
 		}
 	}
 }
