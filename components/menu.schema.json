@@ -1,0 +1,21 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/components/menu.schema.json",
+	"title": "Menu",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"required": ["label", "link"],
+		"properties": {
+			"label": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 50
+			},
+			"link": {
+				"type": "string",
+				"minLength": 1
+			}
+		}
+	}
+}

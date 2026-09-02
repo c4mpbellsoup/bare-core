@@ -4,13 +4,54 @@
 	"title": "Header",
 	"type": "object",
 
-	"required": [],
+	"required": ["left", "centre", "right"],
 
 	"properties": {
+		"left": {
+			"$ref": "#/$defs/headerItem"
+		},
+		"centre": {
+			"$ref": "#/$defs/headerItem"
+		},
+		"right": {
+			"$ref": "#/$defs/headerItem"
+		},
 		"visible": {
 			"description": "Whether to display the header.",
 			"type": "boolean",
 			"default": true
+		}
+	},
+
+	"$defs": {
+		"headerItem": {
+			"oneOf": [
+				{
+					"type": "null"
+				},
+				{
+					"type": "object",
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"const": "logo"
+						}
+					}
+				},
+				{
+					"type": "object",
+					"required": ["type", "menu"],
+					"properties": {
+						"type": {
+							"const": "menu"
+						},
+						"menu": {
+							"$ref": "./menu.schema.json"
+						}
+					}
+				}
+			],
+			"unevaluatedProperties": false
 		}
 	}
 }

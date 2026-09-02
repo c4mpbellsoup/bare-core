@@ -2,14 +2,14 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/template.schema.json",
 	"title": "Bare Template",
-	"description": "The schema for a Bare website template.",
+	"description": "The schema for a Bare Site template.",
 	"type": "object",
 
 	"required": ["schemaVersion", "header", "footer", "pages"],
 
 	"properties": {
 		"schemaVersion": {
-			"description": "The version of the Bare Template schema used by this site.",
+			"description": "The version of the Bare Site template schema used by this template",
 			"type": "integer",
 			"const": 1
 		},

@@ -1,0 +1,56 @@
+schemaVersion: 1
+name: Nelly & Sons Electrical
+template:
+  schemaVersion: 1
+  header:
+    left:
+      type: menu
+      menu:
+      - label: Nelly & Sons
+        link: /
+    centre:
+      type: menu
+      menu:
+      - label: Home
+        link: /
+      - label: About Us
+        link: /about-us
+      - label: Contact Us
+        link: /contact-us
+  footer: {}
+  pages:
+  - route: /
+    title: Home
+    sections:
+    - type: hero
+      image: https://images.unsplash.com/photo-1776695799247-b15851a1aa2d
+      heading: The Outdoorsy Electrician
+      subheading: Industrial | Agricultural | Irrigation
+theme:
+  schemaVersion: 1
+  colors:
+    primary: oklch(45% 0.24 277.023)
+    primaryContent: oklch(93% 0.034 272.788)
+    secondary: oklch(65% 0.241 354.308)
+    secondaryContent: oklch(94% 0.028 342.258)
+    accent: oklch(77% 0.152 181.912)
+    accentContent: oklch(38% 0.063 188.416)
+    neutral: oklch(14% 0.005 285.823)
+    neutralContent: oklch(92% 0.004 286.32)
+    base1: oklch(100% 0 0)
+    base2: oklch(98% 0 0)
+    base3: oklch(95% 0 0)
+    baseContent: oklch(21% 0.006 285.885)
+    info: oklch(74% 0.16 232.661)
+    infoContent: oklch(29% 0.066 243.157)
+    success: oklch(76% 0.177 163.223)
+    successContent: oklch(37% 0.077 168.94)
+    warning: oklch(82% 0.189 84.429)
+    warningContent: oklch(41% 0.112 45.904)
+    error: oklch(71% 0.194 13.428)
+    errorContent: oklch(27% 0.105 12.094)
+  typography:
+    heading: Funnel Sans
+    body: Funnel Sans
+  spacing: comfortable
+  shape: soft

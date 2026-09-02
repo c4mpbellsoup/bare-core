@@ -2,14 +2,14 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/theme.schema.json",
 	"title": "Bare Theme",
-	"description": "Defines the semantic design tokens for a Bare site.",
+	"description": "The schema for a Bare Site theme.",
 	"type": "object",
 
 	"required": ["schemaVersion", "colors", "typography", "spacing", "shape"],
 
 	"properties": {
 		"schemaVersion": {
-			"description": "The version of the Bare Theme schema used by this theme.",
+			"description": "The version of the Bare Site theme schema used by this theme.",
 			"type": "integer",
 			"const": 1
 		},
@@ -32,28 +32,84 @@
 			"type": "object",
 			"required": ["base", "surface", "accent", "text", "muted", "border"],
 			"properties": {
-				"base": {
-					"description": "The primary colour of the site.",
+				"primary": {
+					"description": "The main colour of your brand.",
 					"type": "string"
 				},
-				"surface": {
-					"description": "The colour used for surfaces such as cards and panels.",
+				"primaryContent": {
+					"description": "Foreground colour to use with the primary colour.",
+					"type": "string"
+				},
+				"secondary": {
+					"description": "The optional, secondary colour of your brand.",
+					"type": "string"
+				},
+				"secondaryContent": {
+					"description": "Foreground colour to use with the secondary colour.",
 					"type": "string"
 				},
 				"accent": {
-					"description": "The primary accent colour used for interactive and prominent elements.",
+					"description": "The optional, accent colour of your brand.",
 					"type": "string"
 				},
-				"text": {
-					"description": "The primary colour used for text.",
+				"accentContent": {
+					"description": "Foreground colour to use with the accent color.",
 					"type": "string"
 				},
-				"muted": {
-					"description": "The colour used for secondary or less prominent content.",
+				"neutral": {
+					"description": "A neutral dark colour.",
 					"type": "string"
 				},
-				"border": {
-					"description": "The colour used for borders and separators.",
+				"neutralContent": {
+					"description": "Foreground colour to use with the neutral color.",
+					"type": "string"
+				},
+				"base1": {
+					"description": "Base surface colour.",
+					"type": "string"
+				},
+				"base2": {
+					"description": "Darker base colour.",
+					"type": "string"
+				},
+				"base3": {
+					"description": "Darkest base colour.",
+					"type": "string"
+				},
+				"baseContent": {
+					"description": "Foreground colour to use with the base colours.",
+					"type": "string"
+				},
+				"info": {
+					"description": "Info colour.",
+					"type": "string"
+				},
+				"infoContent": {
+					"description": "Foreground colour to use with the info colour.",
+					"type": "string"
+				},
+				"success": {
+					"description": "Success colour.",
+					"type": "string"
+				},
+				"successContent": {
+					"description": "Foreground colour to use with the success colour.",
+					"type": "string"
+				},
+				"warning": {
+					"description": "Warning colour.",
+					"type": "string"
+				},
+				"warningContent": {
+					"description": "Foreground colour to use with the warning colour.",
+					"type": "string"
+				},
+				"error": {
+					"description": "Error colour.",
+					"type": "string"
+				},
+				"errorContent": {
+					"description": "Foreground colour to use with the error colour.",
 					"type": "string"
 				}
 			}
@@ -75,14 +131,12 @@
 		"spacing": {
 			"description": "The overall spacing density of the site.",
 			"type": "string",
-			"enum": ["tight", "comfortable", "spacious"],
-			"default": "comfortable"
+			"enum": ["tight", "comfortable", "spacious"]
 		},
 		"shape": {
 			"description": "The overall shape language of the site.",
-      "type": "string",
-      "enum": ["sharp", "soft", "rounded"],
-      "default": "soft"
-    }
+			"type": "string",
+			"enum": ["sharp", "soft", "rounded"]
+		}
 	}
 }
