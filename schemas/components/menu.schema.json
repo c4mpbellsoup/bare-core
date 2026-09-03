@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/components/menu.schema.json",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/schemas/components/menu.schema.json",
 	"title": "Menu",
 	"type": "array",
 	"items": {

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/template.schema.json",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/schemas/template.schema.json",
 	"title": "Bare Template",
 	"description": "The schema for a Bare Site template.",
 	"type": "object",

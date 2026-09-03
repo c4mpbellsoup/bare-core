@@ -1,3 +1,3 @@
-# bare-schema
+# bare-core
 
-An open schema for describing simple, independent websites.
+The core schemas and types for Bare sites.

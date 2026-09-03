@@ -1,0 +1,32 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/schemas/registry-entries/template-registry-entry.schema.json",
+	"title": "Bare Template Registry Entry",
+	"description": "Metadata for a template in the Bare Site template registry.",
+	"type": "object",
+
+	"required": ["id", "name", "description", "author", "template"],
+
+	"properties": {
+		"id": {
+			"description": "The stable identifier of the template.",
+			"type": "string",
+			"pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+		},
+		"name": {
+			"description": "The display name of the template.",
+			"type": "string"
+		},
+		"description": {
+			"description": "A short description of the template.",
+			"type": "string"
+		},
+		"author": {
+			"description": "The person or organisation that created the template.",
+			"type": "string"
+		},
+		"theme": {
+			"$ref": "../template.schema.json"
+		}
+	}
+}
