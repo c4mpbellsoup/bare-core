@@ -4,12 +4,6 @@
 	"title": "Header",
 	"type": "object",
 
-	"anyOf": [
-		{ "required": ["left"] },
-		{ "required": ["centre"] },
-		{ "required": ["right"] }
-	],
-
 	"properties": {
 		"left": {
 			"$ref": "#/$defs/headerItem"
@@ -26,6 +20,14 @@
 			"default": true
 		}
 	},
+
+	"anyOf": [
+		{ "required": ["left"] },
+		{ "required": ["centre"] },
+		{ "required": ["right"] }
+	],
+
+	"additionalProperties": false,
 
 	"$defs": {
 		"headerItem": {

@@ -15,7 +15,6 @@ export type Header = {
    * Whether to display the header.
    */
   visible?: boolean;
-  [k: string]: unknown;
 };
 export type HeaderItem =
   | {
