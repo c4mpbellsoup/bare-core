@@ -24,12 +24,16 @@ async function generateTypes() {
       }
 
       const schema = JSON.parse(await fs.readFile(fullPath, "utf8"));
-      const type = await compile(schema, schema.title ?? "GeneratedType");
+
+			const type = await compile(schema, schema.title ?? "GeneratedType", {
+				cwd: path.dirname(fullPath),
+      });
 
       const outputDirectory = path.join(typesDir, relative);
       await fs.mkdir(outputDirectory, { recursive: true });
 
       const outputName = entry.name.replace(".schema.json", ".ts");
+
       await fs.writeFile(path.join(outputDirectory, outputName), type);
     }
   }
