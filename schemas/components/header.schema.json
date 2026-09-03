@@ -6,15 +6,12 @@
 
 	"properties": {
 		"left": {
-			"description": "The left section of the header.",
 			"$ref": "#/$defs/headerSection"
 		},
 		"centre": {
-			"description": "The centre section of the header.",
 			"$ref": "#/$defs/headerSection"
 		},
 		"right": {
-			"description": "The right section of the header.",
 			"$ref": "#/$defs/headerSection"
 		},
 		"visible": {
