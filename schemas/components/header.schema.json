@@ -6,13 +6,16 @@
 
 	"properties": {
 		"left": {
-			"$ref": "#/$defs/headerItem"
+			"description": "The left section of the header.",
+			"$ref": "#/$defs/headerSection"
 		},
 		"centre": {
-			"$ref": "#/$defs/headerItem"
+			"description": "The centre section of the header.",
+			"$ref": "#/$defs/headerSection"
 		},
 		"right": {
-			"$ref": "#/$defs/headerItem"
+			"description": "The right section of the header.",
+			"$ref": "#/$defs/headerSection"
 		},
 		"visible": {
 			"description": "Whether to display the header.",
@@ -30,7 +33,7 @@
 	"additionalProperties": false,
 
 	"$defs": {
-		"headerItem": {
+		"headerSection": {
 			"type": "object",
 			"required": ["type"],
 			"unevaluatedProperties": false,

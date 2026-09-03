@@ -8,15 +8,18 @@
 export type Header = {
   [k: string]: unknown;
 } & {
-  left?: HeaderItem;
-  centre?: HeaderItem;
-  right?: HeaderItem;
+  left?: HeaderSection;
+  centre?: HeaderSection1;
+  right?: HeaderSection2;
   /**
    * Whether to display the header.
    */
   visible?: boolean;
 };
-export type HeaderItem =
+/**
+ * The left section of the header.
+ */
+export type HeaderSection =
   | {
       type?: "logo";
       [k: string]: unknown;
@@ -31,3 +34,29 @@ export type Menu = {
   link: string;
   [k: string]: unknown;
 }[];
+/**
+ * The centre section of the header.
+ */
+export type HeaderSection1 =
+  | {
+      type?: "logo";
+      [k: string]: unknown;
+    }
+  | {
+      type?: "menu";
+      menu: Menu;
+      [k: string]: unknown;
+    };
+/**
+ * The right section of the header.
+ */
+export type HeaderSection2 =
+  | {
+      type?: "logo";
+      [k: string]: unknown;
+    }
+  | {
+      type?: "menu";
+      menu: Menu;
+      [k: string]: unknown;
+    };
