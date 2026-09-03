@@ -6,12 +6,10 @@
 		"generate:schema-index": "tsx scripts/generate-schema-index.ts",
 		"generate:types": "tsx scripts/generate-types.ts"
 	},
-	"dependencies": {
-		"json-schema-to-typescript": "^16.0.0"
-	},
 	"devDependencies": {
 		"@types/node": "^26.4.1",
 		"husky": "^9.1.7",
+		"json-schema-to-typescript": "^16.0.0",
 		"tsx": "^4.23.13",
 		"typescript": "^7.0.2"
 	}
