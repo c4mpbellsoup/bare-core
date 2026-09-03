@@ -15,6 +15,7 @@ export type Header = {
    * Whether to display the header.
    */
   visible?: boolean;
+  contentWidth?: ContentWidth;
 };
 export type HeaderSection =
   | {
@@ -31,6 +32,7 @@ export type Menu = {
   link: string;
   [k: string]: unknown;
 }[];
+export type ContentWidth = "full" | "contained";
 export type Section = Hero;
 
 /**
@@ -71,12 +73,14 @@ export interface BareTemplate {
 export interface Layout {
   header: Header;
   footer: Footer;
+  contentWidth?: ContentWidth;
 }
 export interface Footer {
   /**
    * Whether to display the footer.
    */
   visible?: boolean;
+  contentWidth?: ContentWidth;
   [k: string]: unknown;
 }
 export interface Page {

@@ -1,0 +1,3 @@
+npm run generate:schema-index &&
+npm run generate:types &&
+git add schemas/index.ts types.ts

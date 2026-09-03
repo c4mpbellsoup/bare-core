@@ -18,7 +18,10 @@
 			"description": "Whether to display the header.",
 			"type": "boolean",
 			"default": true
-		}
+		},
+		"contentWidth": {
+    	"$ref": "../shared/content-width.schema.json"
+    }
 	},
 
 	"anyOf": [

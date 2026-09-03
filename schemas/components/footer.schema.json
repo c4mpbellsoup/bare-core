@@ -4,13 +4,14 @@
 	"title": "Footer",
 	"type": "object",
 
-	"required": [],
-
 	"properties": {
 		"visible": {
 			"description": "Whether to display the footer.",
 			"type": "boolean",
 			"default": true
-		}
+		},
+		"contentWidth": {
+    	"$ref": "../shared/content-width.schema.json"
+    }
 	}
 }

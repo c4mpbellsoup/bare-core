@@ -10,6 +10,9 @@
     },
     "footer": {
       "$ref": "./components/footer.schema.json"
+    },
+    "contentWidth": {
+    	"$ref": "./shared/content-width.schema.json"
     }
   },
 
