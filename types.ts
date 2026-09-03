@@ -61,13 +61,16 @@ export interface BareTemplate {
    * The version of the Bare Site template schema used by this template
    */
   schemaVersion: 1;
-  header: Header;
-  footer: Footer;
+  layout: Layout;
   /**
    * @minItems 1
    */
   pages: [Page, ...Page[]];
   [k: string]: unknown;
+}
+export interface Layout {
+  header: Header;
+  footer: Footer;
 }
 export interface Footer {
   /**

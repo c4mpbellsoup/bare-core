@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/schemas/layout.schema.json",
+  "title": "Layout",
+  "type": "object",
+
+  "properties": {
+    "header": {
+      "$ref": "./components/header.schema.json"
+    },
+    "footer": {
+      "$ref": "./components/footer.schema.json"
+    }
+  },
+
+  "required": ["header", "footer"],
+  "additionalProperties": false
+}
