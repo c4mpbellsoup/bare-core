@@ -11,10 +11,7 @@
 			"type": "integer",
 			"const": 1
 		},
-		"name": {
-			"description": "The name of the site (business, organisation, etcetera).",
-			"$ref": "./shared/label.schema.json"
-		},
+		"name": { "$ref": "./shared/label.schema.json" },
 		"description": {
 			"description": "A short description of the site.",
 			"type": "string",

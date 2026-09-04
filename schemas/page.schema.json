@@ -10,10 +10,7 @@
 			"type": "string",
 			"pattern": "^/(?:[A-Za-z0-9-]+/?)*$"
 		},
-		"title": {
-			"description": "The title of the page.",
-			"$ref": "./shared/label.schema.json"
-		},
+		"title": { "$ref": "./shared/label.schema.json" },
 		"sections": {
 			"type": "array",
 			"items": {

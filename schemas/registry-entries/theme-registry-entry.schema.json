@@ -6,11 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"id": {
-			"description": "The stable identifier of the theme.",
-			"type": "string",
-			"pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-		},
+		"id": { "$ref": "../shared/id.schema.json" },
 		"name": {
 			"description": "The display name of the theme.",
 			"type": "string"

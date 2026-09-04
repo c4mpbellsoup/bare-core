@@ -5,10 +5,7 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-/**
- * The name of the site (business, organisation, etcetera).
- */
-export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson = string;
+export type Label = string;
 export type Header = {
   [k: string]: unknown;
 } & {
@@ -22,13 +19,12 @@ export type Header = {
    */
   visible?: boolean;
 };
-export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedIdSchemaJson = string;
-export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson1 = string;
-export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedHrefSchemaJson = string;
+export type ID = string;
+export type Href = string;
 export type Menu = {
-  id: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedIdSchemaJson;
-  label: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson1;
-  href: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedHrefSchemaJson;
+  id: ID;
+  label: Label;
+  href: Href;
 }[];
 export type HeaderSection =
   | {
@@ -37,14 +33,10 @@ export type HeaderSection =
     }
   | {
       type?: "menu";
-      menu: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedIdSchemaJson[];
+      menu: ID[];
       [k: string]: unknown;
     };
 export type ContentWidth = "full" | "contained";
-/**
- * The title of the page.
- */
-export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson2 = string;
 
 /**
  * The schema for a Bare Site.
@@ -54,7 +46,7 @@ export interface BareSite {
    * The version of the Bare Site schema used by this site.
    */
   schemaVersion: 1;
-  name: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson;
+  name: Label;
   /**
    * A short description of the site.
    */
@@ -93,7 +85,7 @@ export interface Page {
    * The route of the page.
    */
   route: string;
-  title: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson2;
+  title: Label;
   sections: Hero[];
 }
 export interface Hero {
@@ -104,8 +96,8 @@ export interface Hero {
   actions?: Action[];
 }
 export interface Action {
-  label: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson1;
-  href: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedHrefSchemaJson;
+  label: Label;
+  href: Href;
   [k: string]: unknown;
 }
 /**

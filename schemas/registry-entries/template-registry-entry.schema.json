@@ -6,10 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"id": {
-			"description": "The stable identifier of the template.",
-			"$ref": "../shared/id.schema.json"
-		},
+		"id": { "$ref": "../shared/id.schema.json" },
 		"name": {
 			"description": "The display name of the template.",
 			"type": "string"
