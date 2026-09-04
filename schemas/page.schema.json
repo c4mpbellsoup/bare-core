@@ -4,8 +4,6 @@
 	"title": "Page",
 	"type": "object",
 
-	"required": ["route", "title", "sections"],
-
 	"properties": {
 		"route": {
 			"description": "The route of the page.",
@@ -14,15 +12,16 @@
 		},
 		"title": {
 			"description": "The title of the page.",
-			"type": "string",
-			"minLength": 1,
-			"maxLength": 50
+			"$ref": "./shared/label.schema.json"
 		},
 		"sections": {
 			"type": "array",
 			"items": {
-				"$ref": "./components/section.schema.json"
+				"oneOf": [{ "$ref": "./components/sections/hero.schema.json" }]
 			}
 		}
-	}
+	},
+
+	"required": ["route", "title", "sections"],
+	"additionalProperties": false
 }

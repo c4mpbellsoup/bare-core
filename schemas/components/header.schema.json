@@ -5,24 +5,19 @@
 	"type": "object",
 
 	"properties": {
-		"left": {
-			"$ref": "#/$defs/headerSection"
-		},
-		"centre": {
-			"$ref": "#/$defs/headerSection"
-		},
-		"right": {
-			"$ref": "#/$defs/headerSection"
-		},
+		"menu": { "$ref": "../shared/menu.schema.json" },
+		"left": { "$ref": "#/$defs/headerSection" },
+		"centre": { "$ref": "#/$defs/headerSection" },
+		"right": { "$ref": "#/$defs/headerSection" },
+		"contentWidth": { "$ref": "../shared/content-width.schema.json" },
 		"visible": {
 			"description": "Whether to display the header.",
 			"type": "boolean",
 			"default": true
-		},
-		"contentWidth": {
-    	"$ref": "../shared/content-width.schema.json"
-    }
+		}
 	},
+
+	"required": ["menu"],
 
 	"anyOf": [
 		{ "required": ["left"] },
@@ -38,21 +33,14 @@
 			"required": ["type"],
 			"unevaluatedProperties": false,
 			"oneOf": [
-				{
-					"properties": {
-						"type": {
-							"const": "logo"
-						}
-					}
-				},
+				{ "properties": { "type": { "const": "logo" } } },
 				{
 					"required": ["menu"],
 					"properties": {
-						"type": {
-							"const": "menu"
-						},
+						"type": { "const": "menu" },
 						"menu": {
-							"$ref": "./menu.schema.json"
+							"type": "array",
+							"items": { "$ref": "../shared/id.schema.json" }
 						}
 					}
 				}

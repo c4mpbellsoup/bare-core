@@ -1,0 +1,16 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/schemas/shared/menu.schema.json",
+	"title": "Menu",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"required": ["id", "label", "href"],
+		"additionalProperties": false,
+		"properties": {
+			"id": { "$ref": "./id.schema.json" },
+			"label": { "$ref": "./label.schema.json" },
+			"href": { "$ref": "./href.schema.json" }
+		}
+	}
+}

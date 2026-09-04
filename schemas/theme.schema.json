@@ -5,27 +5,20 @@
 	"description": "The schema for a Bare Site theme.",
 	"type": "object",
 
-	"required": ["schemaVersion", "colours", "typography", "spacing", "shape"],
-
 	"properties": {
 		"schemaVersion": {
 			"description": "The version of the Bare Site theme schema used by this theme.",
 			"type": "integer",
 			"const": 1
 		},
-		"colours": {
-			"$ref": "#/$defs/colours"
-		},
-		"typography": {
-			"$ref": "#/$defs/typography"
-		},
-		"spacing": {
-			"$ref": "#/$defs/spacing"
-		},
-		"shape": {
-			"$ref": "#/$defs/shape"
-		}
+		"colours": { "$ref": "#/$defs/colours" },
+		"typography": { "$ref": "#/$defs/typography" },
+		"spacing": { "$ref": "#/$defs/spacing" },
+		"shape": { "$ref": "#/$defs/shape" }
 	},
+
+	"required": ["schemaVersion", "colours", "typography", "spacing", "shape"],
+	"additionalProperties": false,
 
 	"$defs": {
 		"colours": {
@@ -81,50 +74,29 @@
 					"description": "Foreground colour to use with the neutral color.",
 					"type": "string"
 				},
-				"base1": {
-					"description": "Base surface colour.",
-					"type": "string"
-				},
-				"base2": {
-					"description": "Darker base colour.",
-					"type": "string"
-				},
-				"base3": {
-					"description": "Darkest base colour.",
-					"type": "string"
-				},
+				"base1": { "description": "Base surface colour.", "type": "string" },
+				"base2": { "description": "Darker base colour.", "type": "string" },
+				"base3": { "description": "Darkest base colour.", "type": "string" },
 				"baseContent": {
 					"description": "Foreground colour to use with the base colours.",
 					"type": "string"
 				},
-				"info": {
-					"description": "Info colour.",
-					"type": "string"
-				},
+				"info": { "description": "Info colour.", "type": "string" },
 				"infoContent": {
 					"description": "Foreground colour to use with the info colour.",
 					"type": "string"
 				},
-				"success": {
-					"description": "Success colour.",
-					"type": "string"
-				},
+				"success": { "description": "Success colour.", "type": "string" },
 				"successContent": {
 					"description": "Foreground colour to use with the success colour.",
 					"type": "string"
 				},
-				"warning": {
-					"description": "Warning colour.",
-					"type": "string"
-				},
+				"warning": { "description": "Warning colour.", "type": "string" },
 				"warningContent": {
 					"description": "Foreground colour to use with the warning colour.",
 					"type": "string"
 				},
-				"error": {
-					"description": "Error colour.",
-					"type": "string"
-				},
+				"error": { "description": "Error colour.", "type": "string" },
 				"errorContent": {
 					"description": "Foreground colour to use with the error colour.",
 					"type": "string"

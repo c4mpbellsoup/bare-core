@@ -5,18 +5,31 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+/**
+ * The name of the site (business, organisation, etcetera).
+ */
+export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson = string;
 export type Header = {
   [k: string]: unknown;
 } & {
+  menu: Menu;
   left?: HeaderSection;
   centre?: HeaderSection;
   right?: HeaderSection;
+  contentWidth?: ContentWidth;
   /**
    * Whether to display the header.
    */
   visible?: boolean;
-  contentWidth?: ContentWidth;
 };
+export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedIdSchemaJson = string;
+export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson1 = string;
+export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedHrefSchemaJson = string;
+export type Menu = {
+  id: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedIdSchemaJson;
+  label: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson1;
+  href: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedHrefSchemaJson;
+}[];
 export type HeaderSection =
   | {
       type?: "logo";
@@ -24,16 +37,14 @@ export type HeaderSection =
     }
   | {
       type?: "menu";
-      menu: Menu;
+      menu: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedIdSchemaJson[];
       [k: string]: unknown;
     };
-export type Menu = {
-  label: string;
-  link: string;
-  [k: string]: unknown;
-}[];
 export type ContentWidth = "full" | "contained";
-export type Section = Hero;
+/**
+ * The title of the page.
+ */
+export type HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson2 = string;
 
 /**
  * The schema for a Bare Site.
@@ -43,17 +54,13 @@ export interface BareSite {
    * The version of the Bare Site schema used by this site.
    */
   schemaVersion: 1;
-  /**
-   * The name of the site (business, organisation, etcetera).
-   */
-  name: string;
+  name: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson;
   /**
    * A short description of the site.
    */
   description?: string;
   template: BareTemplate;
   theme: BareTheme;
-  [k: string]: unknown;
 }
 /**
  * The schema for a Bare Site template.
@@ -68,7 +75,6 @@ export interface BareTemplate {
    * @minItems 1
    */
   pages: [Page, ...Page[]];
-  [k: string]: unknown;
 }
 export interface Layout {
   header: Header;
@@ -81,19 +87,14 @@ export interface Footer {
    */
   visible?: boolean;
   contentWidth?: ContentWidth;
-  [k: string]: unknown;
 }
 export interface Page {
   /**
    * The route of the page.
    */
   route: string;
-  /**
-   * The title of the page.
-   */
-  title: string;
-  sections: Section[];
-  [k: string]: unknown;
+  title: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson2;
+  sections: Hero[];
 }
 export interface Hero {
   type: "hero";
@@ -101,12 +102,10 @@ export interface Hero {
   heading: string;
   subheading?: string;
   actions?: Action[];
-  [k: string]: unknown;
 }
 export interface Action {
-  label: string;
-  link: string;
-  style?: "primary" | "secondary";
+  label: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedLabelSchemaJson1;
+  href: HttpsRawGithubusercontentComC4MpbellsoupBareSchemaRefsHeadsMasterSchemasSharedHrefSchemaJson;
   [k: string]: unknown;
 }
 /**
@@ -127,7 +126,6 @@ export interface BareTheme {
    * The overall shape language of the site.
    */
   shape: "sharp" | "soft" | "rounded";
-  [k: string]: unknown;
 }
 export interface Colours {
   /**

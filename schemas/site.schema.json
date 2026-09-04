@@ -5,8 +5,6 @@
 	"description": "The schema for a Bare Site.",
 	"type": "object",
 
-	"required": ["schemaVersion", "name", "template", "theme"],
-
 	"properties": {
 		"schemaVersion": {
 			"description": "The version of the Bare Site schema used by this site.",
@@ -15,20 +13,18 @@
 		},
 		"name": {
 			"description": "The name of the site (business, organisation, etcetera).",
-			"type": "string",
-			"minLength": 1,
-			"maxLength": 50
+			"$ref": "./shared/label.schema.json"
 		},
 		"description": {
 			"description": "A short description of the site.",
 			"type": "string",
+			"minLength": 1,
 			"maxLength": 150
 		},
-		"template": {
-			"$ref": "./template.schema.json"
-		},
-		"theme": {
-			"$ref": "./theme.schema.json"
-		}
-	}
+		"template": { "$ref": "./template.schema.json" },
+		"theme": { "$ref": "./theme.schema.json" }
+	},
+
+	"required": ["schemaVersion", "name", "template", "theme"],
+	"additionalProperties": false
 }

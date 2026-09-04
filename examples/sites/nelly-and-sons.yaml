@@ -6,28 +6,28 @@ template:
     left:
       type: menu
       menu:
-      - label: Nelly & Sons
-        link: /
+        - label: Nelly & Sons
+          link: /
     centre:
       type: menu
       menu:
-      - label: Home
-        link: /
-      - label: About Us
-        link: /about-us
-      - label: Contact Us
-        link: /contact-us
+        - label: Home
+          link: /
+        - label: About Us
+          link: /about-us
+        - label: Contact Us
+          link: /contact-us
   footer: {}
   pages:
-  - route: /
-    title: Home
-    sections:
-    - type: hero
-      image: https://images.unsplash.com/photo-1776695799247-b15851a1aa2d
-      heading: The Outdoorsy Electrician
-      subheading: Industrial | Agricultural | Irrigation
+    - route: /
+      title: Home
+      sections:
+        - type: hero
+          image: https://images.unsplash.com/photo-1776695799247-b15851a1aa2d
+          heading: The Outdoorsy Electrician
+          subheading: Industrial | Agricultural | Irrigation
 theme:
- 	# ../themes/light-theme.yaml
+  # ../themes/light-theme.yaml
   schemaVersion: 1
   colours:
     primary: oklch(45% 0.24 277.023)

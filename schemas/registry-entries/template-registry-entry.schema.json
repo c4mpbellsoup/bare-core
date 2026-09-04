@@ -5,13 +5,10 @@
 	"description": "Metadata for a template in the Bare Site template registry.",
 	"type": "object",
 
-	"required": ["id", "name", "description", "author", "template"],
-
 	"properties": {
 		"id": {
 			"description": "The stable identifier of the template.",
-			"type": "string",
-			"pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+			"$ref": "../shared/id.schema.json"
 		},
 		"name": {
 			"description": "The display name of the template.",
@@ -25,8 +22,9 @@
 			"description": "The person or organisation that created the template.",
 			"type": "string"
 		},
-		"theme": {
-			"$ref": "../template.schema.json"
-		}
-	}
+		"template": { "$ref": "../template.schema.json" }
+	},
+
+	"required": ["id", "name", "description", "author", "template"],
+	"additionalProperties": false
 }

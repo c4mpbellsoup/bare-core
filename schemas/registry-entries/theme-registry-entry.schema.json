@@ -5,8 +5,6 @@
 	"description": "Metadata for a theme in the Bare Site theme registry.",
 	"type": "object",
 
-	"required": ["id", "name", "description", "author", "theme"],
-
 	"properties": {
 		"id": {
 			"description": "The stable identifier of the theme.",
@@ -25,8 +23,9 @@
 			"description": "The person or organisation that created the theme.",
 			"type": "string"
 		},
-		"theme": {
-			"$ref": "../theme.schema.json"
-		}
-	}
+		"theme": { "$ref": "../theme.schema.json" }
+	},
+
+	"required": ["id", "name", "description", "author", "theme"],
+	"additionalProperties": false
 }
