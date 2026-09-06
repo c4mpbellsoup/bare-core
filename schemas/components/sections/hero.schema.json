@@ -4,10 +4,6 @@
 	"title": "Hero",
 	"type": "object",
 
-	"properties": { "type": { "const": "hero" } },
-	"required": ["type"],
-	"additionalProperties": false,
-
 	"oneOf": [
 		{ "$ref": "#/$defs/standardHero" },
 		{ "$ref": "#/$defs/carouselHero" }
@@ -44,8 +40,11 @@
 			"allOf": [
 				{ "$ref": "#/$defs/baseHero" },
 				{
-					"required": ["variant"],
-					"properties": { "variant": { "const": "standard" } },
+					"required": ["type", "variant"],
+					"properties": {
+						"type": { "const": "hero" },
+						"variant": { "const": "standard" }
+					},
 					"additionalProperties": false
 				}
 			]
@@ -54,9 +53,10 @@
 		"carouselHero": {
 			"title": "Carousel Hero",
 			"type": "object",
-			"required": ["variant", "pages"],
+			"required": ["type", "variant", "pages"],
 			"additionalProperties": false,
 			"properties": {
+				"type": { "const": "hero" },
 				"variant": { "const": "carousel" },
 				"pages": { "type": "array", "items": { "$ref": "#/$defs/baseHero" } }
 			}

@@ -38,10 +38,9 @@ export type HeaderSection =
     };
 export type ContentWidth = "full" | "contained";
 export type Section = Hero;
-export type Hero = {
-  type: "hero";
-} & (StandardHero | CarouselHero);
+export type Hero = StandardHero | CarouselHero;
 export type StandardHero = BaseHero & {
+  type: "hero";
   variant: "standard";
 };
 
@@ -106,6 +105,7 @@ export interface Action {
   href: HREF;
 }
 export interface CarouselHero {
+  type: "hero";
   variant: "carousel";
   pages: BaseHero[];
 }
