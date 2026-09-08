@@ -4,9 +4,6 @@
 	"title": "Hero",
 	"type": "object",
 
-	"properties": { "type": { "const": "hero" } },
-	"required": ["type"],
-
 	"oneOf": [
 		{ "$ref": "#/$defs/basicHero" },
 		{ "$ref": "#/$defs/carouselHero" }
@@ -39,19 +36,23 @@
 			"title": "Basic Hero",
 			"type": "object",
 			"allOf": [
-				{ "$ref": "#/$defs/heroBase" },
 				{
-					"required": ["variant"],
-					"properties": { "variant": { "const": "basic" } }
-				}
+					"required": ["type", "variant"],
+					"properties": {
+						"type": { "const": "hero" },
+						"variant": { "const": "basic" }
+					}
+				},
+				{ "$ref": "#/$defs/heroBase" }
 			]
 		},
 
 		"carouselHero": {
 			"title": "Carousel Hero",
 			"type": "object",
-			"required": ["variant", "pages"],
+			"required": ["type", "variant", "pages"],
 			"properties": {
+				"type": { "const": "hero" },
 				"variant": { "const": "carousel" },
 				"pages": { "type": "array", "items": { "$ref": "#/$defs/heroBase" } }
 			}

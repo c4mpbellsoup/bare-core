@@ -40,14 +40,12 @@ export type HeaderSection =
     };
 export type ContentWidth = "full" | "contained";
 export type Section = Hero;
-export type Hero = {
+export type Hero = BasicHero | CarouselHero;
+export type BasicHero = {
   type: "hero";
-  [k: string]: unknown;
-} & (BasicHero | CarouselHero);
-export type BasicHero = HeroBase & {
   variant: "basic";
   [k: string]: unknown;
-};
+} & HeroBase;
 
 /**
  * The schema for a Bare Site.
@@ -117,6 +115,7 @@ export interface Action {
   [k: string]: unknown;
 }
 export interface CarouselHero {
+  type: "hero";
   variant: "carousel";
   pages: HeroBase[];
   [k: string]: unknown;
