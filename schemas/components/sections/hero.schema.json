@@ -54,7 +54,11 @@
 			"properties": {
 				"type": { "const": "hero" },
 				"variant": { "const": "carousel" },
-				"pages": { "type": "array", "items": { "$ref": "#/$defs/heroBase" } }
+				"pages": {
+					"type": "array",
+					"items": { "$ref": "#/$defs/heroBase" },
+					"minItems": 1
+				}
 			}
 		}
 	}

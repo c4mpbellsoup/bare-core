@@ -117,7 +117,10 @@ export interface Action {
 export interface CarouselHero {
   type: "hero";
   variant: "carousel";
-  pages: HeroBase[];
+  /**
+   * @minItems 1
+   */
+  pages: [HeroBase, ...HeroBase[]];
   [k: string]: unknown;
 }
 /**
