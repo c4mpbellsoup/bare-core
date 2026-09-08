@@ -18,6 +18,7 @@ export type Header = {
    * Whether to display the header.
    */
   visible?: boolean;
+  [k: string]: unknown;
 };
 export type ID = string;
 export type HREF = string;
@@ -25,6 +26,7 @@ export type Menu = {
   id: ID;
   label: Label;
   href: HREF;
+  [k: string]: unknown;
 }[];
 export type HeaderSection =
   | {
@@ -38,10 +40,13 @@ export type HeaderSection =
     };
 export type ContentWidth = "full" | "contained";
 export type Section = Hero;
-export type Hero = StandardHero | CarouselHero;
-export type StandardHero = BaseHero & {
+export type Hero = {
   type: "hero";
-  variant: "standard";
+  [k: string]: unknown;
+} & (BasicHero | CarouselHero);
+export type BasicHero = HeroBase & {
+  variant: "basic";
+  [k: string]: unknown;
 };
 
 /**
@@ -59,6 +64,7 @@ export interface BareSite {
   description?: string;
   template: BareTemplate;
   theme: BareTheme;
+  [k: string]: unknown;
 }
 /**
  * The schema for a Bare Site template.
@@ -73,11 +79,13 @@ export interface BareTemplate {
    * @minItems 1
    */
   pages: [Page, ...Page[]];
+  [k: string]: unknown;
 }
 export interface Layout {
   header: Header;
   footer: Footer;
   contentWidth?: ContentWidth;
+  [k: string]: unknown;
 }
 export interface Footer {
   /**
@@ -85,6 +93,7 @@ export interface Footer {
    */
   visible?: boolean;
   contentWidth?: ContentWidth;
+  [k: string]: unknown;
 }
 export interface Page {
   /**
@@ -93,21 +102,24 @@ export interface Page {
   route: string;
   title: Label;
   sections: Section[];
+  [k: string]: unknown;
 }
-export interface BaseHero {
+export interface HeroBase {
   image: string;
   heading: string;
   subheading?: string;
   actions?: Action[];
+  [k: string]: unknown;
 }
 export interface Action {
   label: Label;
   href: HREF;
+  [k: string]: unknown;
 }
 export interface CarouselHero {
-  type: "hero";
   variant: "carousel";
-  pages: BaseHero[];
+  pages: HeroBase[];
+  [k: string]: unknown;
 }
 /**
  * The schema for a Bare Site theme.
@@ -127,6 +139,7 @@ export interface BareTheme {
    * The overall shape language of the site.
    */
   shape: "sharp" | "soft" | "rounded";
+  [k: string]: unknown;
 }
 export interface Colours {
   /**

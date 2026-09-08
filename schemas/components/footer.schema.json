@@ -11,7 +11,5 @@
 			"default": true
 		},
 		"contentWidth": { "$ref": "../shared/content-width.schema.json" }
-	},
-
-	"additionalProperties": false
+	}
 }

@@ -4,8 +4,11 @@
 	"title": "Hero",
 	"type": "object",
 
+	"properties": { "type": { "const": "hero" } },
+	"required": ["type"],
+
 	"oneOf": [
-		{ "$ref": "#/$defs/standardHero" },
+		{ "$ref": "#/$defs/basicHero" },
 		{ "$ref": "#/$defs/carouselHero" }
 	],
 
@@ -14,18 +17,16 @@
 			"title": "Action",
 			"type": "object",
 			"required": ["label", "href"],
-			"additionalProperties": false,
 			"properties": {
 				"label": { "$ref": "../../shared/label.schema.json" },
 				"href": { "$ref": "../../shared/href.schema.json" }
 			}
 		},
 
-		"baseHero": {
-			"title": "Base Hero",
+		"heroBase": {
+			"title": "Hero Base",
 			"type": "object",
 			"required": ["image", "heading"],
-			"additionalProperties": false,
 			"properties": {
 				"image": { "type": "string" },
 				"heading": { "type": "string" },
@@ -34,18 +35,14 @@
 			}
 		},
 
-		"standardHero": {
-			"title": "Standard Hero",
+		"basicHero": {
+			"title": "Basic Hero",
 			"type": "object",
 			"allOf": [
-				{ "$ref": "#/$defs/baseHero" },
+				{ "$ref": "#/$defs/heroBase" },
 				{
-					"required": ["type", "variant"],
-					"properties": {
-						"type": { "const": "hero" },
-						"variant": { "const": "standard" }
-					},
-					"additionalProperties": false
+					"required": ["variant"],
+					"properties": { "variant": { "const": "basic" } }
 				}
 			]
 		},
@@ -53,12 +50,10 @@
 		"carouselHero": {
 			"title": "Carousel Hero",
 			"type": "object",
-			"required": ["type", "variant", "pages"],
-			"additionalProperties": false,
+			"required": ["variant", "pages"],
 			"properties": {
-				"type": { "const": "hero" },
 				"variant": { "const": "carousel" },
-				"pages": { "type": "array", "items": { "$ref": "#/$defs/baseHero" } }
+				"pages": { "type": "array", "items": { "$ref": "#/$defs/heroBase" } }
 			}
 		}
 	}

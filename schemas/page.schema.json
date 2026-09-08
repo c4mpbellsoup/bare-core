@@ -20,6 +20,5 @@
 		}
 	},
 
-	"required": ["route", "title", "sections"],
-	"additionalProperties": false
+	"required": ["route", "title", "sections"]
 }

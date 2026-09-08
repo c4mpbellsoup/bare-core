@@ -22,6 +22,5 @@
 		"theme": { "$ref": "../theme.schema.json" }
 	},
 
-	"required": ["id", "name", "description", "author", "theme"],
-	"additionalProperties": false
+	"required": ["id", "name", "description", "author", "theme"]
 }

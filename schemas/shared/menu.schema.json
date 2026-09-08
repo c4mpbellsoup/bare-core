@@ -6,7 +6,6 @@
 	"items": {
 		"type": "object",
 		"required": ["id", "label", "href"],
-		"additionalProperties": false,
 		"properties": {
 			"id": { "$ref": "./id.schema.json" },
 			"label": { "$ref": "./label.schema.json" },

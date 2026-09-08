@@ -22,6 +22,5 @@
 		"theme": { "$ref": "./theme.schema.json" }
 	},
 
-	"required": ["schemaVersion", "name", "template", "theme"],
-	"additionalProperties": false
+	"required": ["schemaVersion", "name", "template", "theme"]
 }

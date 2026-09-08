@@ -18,7 +18,6 @@
 	},
 
 	"required": ["schemaVersion", "colours", "typography", "spacing", "shape"],
-	"additionalProperties": false,
 
 	"$defs": {
 		"colours": {

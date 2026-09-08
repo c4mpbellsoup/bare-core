@@ -19,6 +19,5 @@
 		}
 	},
 
-	"required": ["schemaVersion", "layout", "pages"],
-	"additionalProperties": false
+	"required": ["schemaVersion", "layout", "pages"]
 }

@@ -25,13 +25,10 @@
 		{ "required": ["right"] }
 	],
 
-	"additionalProperties": false,
-
 	"$defs": {
 		"headerSection": {
 			"type": "object",
 			"required": ["type"],
-			"unevaluatedProperties": false,
 			"oneOf": [
 				{ "properties": { "type": { "const": "logo" } } },
 				{
