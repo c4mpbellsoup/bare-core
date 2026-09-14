@@ -10,16 +10,6 @@
 	],
 
 	"$defs": {
-		"action": {
-			"title": "Action",
-			"type": "object",
-			"required": ["label", "href"],
-			"properties": {
-				"label": { "$ref": "../../shared/label.schema.json" },
-				"href": { "$ref": "../../shared/href.schema.json" }
-			}
-		},
-
 		"heroBase": {
 			"title": "Hero Base",
 			"type": "object",
@@ -28,7 +18,10 @@
 				"image": { "type": "string" },
 				"heading": { "type": "string" },
 				"subheading": { "type": "string" },
-				"actions": { "type": "array", "items": { "$ref": "#/$defs/action" } }
+				"actions": {
+					"type": "array",
+					"items": { "$ref": "../action.schema.json" }
+				}
 			}
 		},
 

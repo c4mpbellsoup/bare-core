@@ -15,7 +15,10 @@
 			"type": "array",
 			"items": {
 				"title": "Section",
-				"oneOf": [{ "$ref": "./components/sections/hero.schema.json" }]
+				"oneOf": [
+					{ "$ref": "./components/sections/hero.schema.json" },
+					{ "$ref": "./components/sections/content.schema.json" }
+				]
 			}
 		}
 	},
