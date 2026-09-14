@@ -126,7 +126,8 @@ export interface CarouselHero {
 export interface Content {
   type: "content";
   heading: string;
-  text?: string;
+  content?: string;
+  image?: string;
   actions?: Action[];
   [k: string]: unknown;
 }
