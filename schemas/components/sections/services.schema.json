@@ -1,0 +1,31 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/schemas/components/sections/services.schema.json",
+	"title": "Services",
+	"type": "object",
+
+	"properties": {
+		"type": { "const": "services" },
+		"heading": { "type": "string" },
+		"services": {
+			"type": "array",
+			"items": { "$ref": "#/$defs/service" },
+			"minItems": 1
+		}
+	},
+
+	"required": ["type", "services"],
+
+	"$defs": {
+		"service": {
+			"title": "Service",
+			"type": "object",
+			"required": ["title"],
+			"properties": {
+				"image": { "type": "string" },
+				"title": { "type": "string" },
+				"description": { "type": "string" }
+			}
+		}
+	}
+}

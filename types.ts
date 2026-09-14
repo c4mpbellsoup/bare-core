@@ -39,7 +39,7 @@ export type HeaderSection =
       [k: string]: unknown;
     };
 export type ContentWidth = "full" | "contained";
-export type Section = Hero | Content;
+export type Section = Hero | Content | Services;
 export type Hero = BasicHero | CarouselHero;
 export type BasicHero = {
   type: "hero";
@@ -129,6 +129,21 @@ export interface Content {
   content?: string;
   image?: string;
   actions?: Action[];
+  [k: string]: unknown;
+}
+export interface Services {
+  type: "services";
+  heading?: string;
+  /**
+   * @minItems 1
+   */
+  services: [Service, ...Service[]];
+  [k: string]: unknown;
+}
+export interface Service {
+  image?: string;
+  title: string;
+  description?: string;
   [k: string]: unknown;
 }
 /**
