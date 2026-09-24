@@ -83,6 +83,7 @@ export interface Layout {
   header: Header;
   footer: Footer;
   contentWidth?: ContentWidth;
+  fontSize?: "standard" | "larger";
   [k: string]: unknown;
 }
 export interface Footer {
