@@ -17,7 +17,7 @@
 				"title": "Section",
 				"oneOf": [
 					{ "$ref": "./components/sections/hero.schema.json" },
-					{ "$ref": "./components/sections/content.schema.json" },
+					{ "$ref": "./components/sections/rich-content.schema.json" },
 					{ "$ref": "./components/sections/services.schema.json" }
 				]
 			}

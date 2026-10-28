@@ -1,0 +1,14 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/c4mpbellsoup/bare-schema/refs/heads/master/schemas/components/sections/rich-content.schema.json",
+	"title": "Rich Content",
+	"type": "object",
+
+	"properties": {
+		"type": { "const": "rich-content" },
+		"content": { "type": "string" },
+		"actions": { "type": "array", "items": { "$ref": "../action.schema.json" } }
+	},
+
+	"required": ["type", "content"]
+}
