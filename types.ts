@@ -18,6 +18,14 @@ export type Header = {
    * Whether to display the header.
    */
   visible?: boolean;
+  /**
+   * Whether the header stays fixed to the top of the screen when scrolling.
+   */
+  sticky?: boolean;
+  /**
+   * Whether the header sits on top of the page content rather than inline with it.
+   */
+  overlay?: boolean;
   [k: string]: unknown;
 };
 export type ID = string;
