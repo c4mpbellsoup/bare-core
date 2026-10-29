@@ -46,6 +46,10 @@ export type BasicHero = {
   variant: "basic";
   [k: string]: unknown;
 } & HeroBase;
+/**
+ * How long each page is shown before the carousel advances. Either a preset or a number of seconds.
+ */
+export type CarouselInterval = ("short" | "medium" | "long") | number;
 
 /**
  * The schema for a Bare Site.
@@ -122,10 +126,7 @@ export interface CarouselHero {
    * @minItems 1
    */
   pages: [HeroBase, ...HeroBase[]];
-  /**
-   * How long each page is shown before the carousel advances. Either a preset or a number of seconds.
-   */
-  interval?: ("short" | "medium" | "long") | number;
+  interval?: CarouselInterval;
   [k: string]: unknown;
 }
 export interface RichContent {

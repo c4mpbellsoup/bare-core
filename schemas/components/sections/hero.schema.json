@@ -52,15 +52,18 @@
 					"items": { "$ref": "#/$defs/heroBase" },
 					"minItems": 1
 				},
-				"interval": {
-					"description": "How long each page is shown before the carousel advances. Either a preset or a number of seconds.",
-					"oneOf": [
-						{ "enum": ["short", "medium", "long"] },
-						{ "type": "number", "exclusiveMinimum": 0 }
-					],
-					"default": "medium"
-				}
+				"interval": { "$ref": "#/$defs/carouselInterval" }
 			}
+		},
+
+		"carouselInterval": {
+			"title": "Carousel Interval",
+			"description": "How long each page is shown before the carousel advances. Either a preset or a number of seconds.",
+			"oneOf": [
+				{ "enum": ["short", "medium", "long"] },
+				{ "type": "number", "exclusiveMinimum": 0 }
+			],
+			"default": "medium"
 		}
 	}
 }
