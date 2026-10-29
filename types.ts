@@ -122,6 +122,10 @@ export interface CarouselHero {
    * @minItems 1
    */
   pages: [HeroBase, ...HeroBase[]];
+  /**
+   * How long each page is shown before the carousel advances. Either a preset or a number of seconds.
+   */
+  interval?: ("short" | "medium" | "long") | number;
   [k: string]: unknown;
 }
 export interface RichContent {
